@@ -18,7 +18,7 @@ public class KioskSteps {
     @만약("상품 목록을 조회한다")
     public void 상품_목록을_조회한다() {
         response = given()
-//                .header("Authorization", "Bearer " + context.authToken())
+                .header("Cookie", "AUTH_TOKEN=" + context.authToken())
                 .when()
                 .get(context.serviceUrl("kiosk") + "/api/products");
     }
