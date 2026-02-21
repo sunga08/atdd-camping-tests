@@ -1,0 +1,21 @@
+{
+  "priority": 2,
+  "request": {
+    "method": "POST",
+    "urlPath": "/v1/payments/confirm"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "paymentKey": "pay_mock",
+      "orderId": "ord_mock",
+      "method": "CARD",
+      "approvedAt": "2024-01-01T00:00:00",
+      "totalAmount": 10000,
+      "status": "APPROVED"
+    }
+  }
+}

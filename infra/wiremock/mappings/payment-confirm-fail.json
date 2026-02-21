@@ -1,0 +1,22 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "urlPath": "/v1/payments/confirm",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.amount == 12345)]"
+      }
+    ]
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "code": "PAYMENT_REJECTED",
+      "message": "결제가 거절되었습니다."
+    }
+  }
+}
